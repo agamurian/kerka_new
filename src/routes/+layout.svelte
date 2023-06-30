@@ -2,8 +2,8 @@
 	import '../app.postcss';
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 	import { page } from '$app/stores';
-	$: title = $page.url.pathname.split('/').join(' | ') + ' | Agamurian';
-	const description = 'Designer, Dveloper, Media-Artist';
+	$: title = $page.url.pathname.split('/').join(' - ') + ' - Kerka Gallery';
+	const description = 'Independent contemprorary art gallery';
 </script>
 
 <svelte:head>
