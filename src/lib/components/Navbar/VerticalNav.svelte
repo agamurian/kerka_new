@@ -7,15 +7,20 @@
 
 <div class="nav">
 	{#each menu as item}
-		<div class="nav-item">
-			<a class="mx-5" class:active-route={item.href == $page.route.id} href={item.href}>
-				{item[$lang]}
-			</a>
-		</div>
+		<a href={item.href}>
+			<div class="nav-item" class:active={item.href == $page.route.id}>
+				<span class="mx-5">
+					{item[$lang]}
+				</span>
+			</div>
+		</a>
 	{/each}
 </div>
 
 <style>
+	a {
+		text-decoration: none;
+	}
 	.nav {
 		height: 100vh;
 		width: 60px;
@@ -38,5 +43,15 @@
 		padding: 15px;
 		width: 100%;
 		height: calc(25vh - 40px);
+	}
+
+	.nav-item:hover {
+		background-color: #888;
+		color: white;
+	}
+
+	.active {
+		color: white;
+		background-color: black;
 	}
 </style>

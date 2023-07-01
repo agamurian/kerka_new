@@ -40,9 +40,10 @@
 
 <style>
 	.nav-item {
+		border-left: 3px dashed black;
 		display: flex;
 		flex: 0;
-		padding: 10px;
+		padding: 7px 7px 7px 15px;
 		height: 100%;
 	}
 	.navbar {
