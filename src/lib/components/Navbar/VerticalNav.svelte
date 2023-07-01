@@ -27,7 +27,7 @@
 		position: fixed;
 		left: 0;
 		top: 0;
-		padding-top: 60px;
+		padding-top: 59.5px;
 		z-index: 2;
 		border-right: 3px dashed black;
 		text-overflow: ellipsis;

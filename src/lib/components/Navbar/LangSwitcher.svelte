@@ -10,5 +10,5 @@
 </script>
 
 <button class="m-0 mr-2" on:click={changeLang}>
-	{$lang}
+	{$lang.toUpperCase()}
 </button>
