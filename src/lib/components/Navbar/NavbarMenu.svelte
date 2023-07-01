@@ -1,16 +1,15 @@
 <script>
 	import { page } from '$app/stores';
 	import LangSwitcher from './LangSwitcher.svelte';
-	import { lang, backgroundColor } from '$lib/stores';
+	import { lang } from '$lib/stores';
 	import { menu } from '$lib/content/common';
 	import { fade } from 'svelte/transition';
-	import { MenuOutlined } from 'svelte-ant-design-icons';
 	let showMenu = false;
 	let menuButtonElement;
 </script>
 
 <button bind:this={menuButtonElement} class="m-0" on:click={() => (showMenu = !showMenu)}>
-	<MenuOutlined style="display:inline; margin-right: 0.3rem;" />
+	<span style="display:inline; margin-right: 0.3rem;">-</span>
 </button>
 
 {#if showMenu}
