@@ -22,4 +22,12 @@
 </svelte:head>
 
 <Navbar />
-<slot />
+<div class="content">
+	<slot />
+</div>
+
+<style>
+	.content {
+		padding-left: 60px;
+	}
+</style>

@@ -3,8 +3,8 @@
 	import { backgroundColor, lang, hideNav } from '$lib/stores';
 	import { menu } from '$lib/content/common';
 	import LangSwitcher from './LangSwitcher.svelte';
-	import NavbarMenu from './NavbarMenu.svelte';
 	import KerkaNav from '../Icons/KerkaNav.svelte';
+	import VerticalNav from './VerticalNav.svelte';
 	let lastScrollTop = 0;
 </script>
 
@@ -21,7 +21,7 @@
 <nav
 	class="sticky top-0 p-0 navbar flex"
 	class:hide-nav={$hideNav}
-	style="background-color: {$backgroundColor}; height:80px"
+	style="background-color: {$backgroundColor}; height:60px"
 >
 	<section class="text-left w-15 p-0">
 		<a class="m-0 p-0" href="/#">
@@ -29,31 +29,20 @@
 		</a>
 	</section>
 
-	<div class="hidden md:flex md:flex-grow">
-		<section class="text-center flex-grow">
-			{#each menu as item}
-				<div class="nav-item">
-					<a class="mx-5" class:active-route={item.href == $page.route.id} href={item.href}>
-						{item[$lang]}
-					</a>
-				</div>
-			{/each}
-		</section>
+	<div class="flex flex-grow">
+		<section style="flex: 1" />
 		<section class="w-15 nav-item">
 			<LangSwitcher />
 		</section>
 	</div>
-
-	<div class="flex flex-grow flex-row-reverse md:hidden">
-		<NavbarMenu />
-	</div>
 </nav>
+<VerticalNav />
 
 <style>
 	.nav-item {
-		border-left: 3px dashed black;
-		display: inline-block;
-		padding: 19px;
+		display: flex;
+		flex: 0;
+		padding: 10px;
 		height: 100%;
 	}
 	.navbar {
@@ -63,10 +52,10 @@
 		top: 0;
 		transition: 0.4s ease-out;
 		border-bottom: 3px solid black;
-		border-top: 10px solid black;
+		border-top: 12px solid black;
 	}
 	.hide-nav {
-		top: -80px;
+		top: -60px;
 		transition: 0.4s ease-out;
 	}
 	.active-route {
