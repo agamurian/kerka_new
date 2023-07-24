@@ -12,7 +12,7 @@ export const menu: Array<menuItem> = [
 	{ href: '/', en: 'About', ru: 'О галерее' },
 	{ href: '/artists', en: 'Artists', ru: 'Художники' },
 	{ href: '/market', en: 'Market', ru: 'Маркет' },
-	{ href: '/events', en: 'Events', ru: 'События' }
+	{ href: '/events', en: 'Exhibitions', ru: 'Выставки' }
 ];
 
 export const meta = {

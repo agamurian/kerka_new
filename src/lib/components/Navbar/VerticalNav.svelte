@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import { lang } from '$lib/stores';
 	import { menu } from '$lib/content/common';
-	import { fade } from 'svelte/transition';
 </script>
 
 <div class="nav">
@@ -18,6 +17,9 @@
 </div>
 
 <style>
+	span {
+		text-rendering: optimizeLegibility;
+	}
 	a {
 		text-decoration: none;
 	}
@@ -29,7 +31,7 @@
 		top: 0;
 		padding-top: 59.5px;
 		z-index: 2;
-		border-right: 3px dashed black;
+		border-right: 3px solid black;
 		text-overflow: ellipsis;
 	}
 	.nav-item {
