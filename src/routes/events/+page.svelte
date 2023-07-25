@@ -13,7 +13,7 @@
 				<p class="pvh3"><b>{translationOf(event, et, $lang).title}</b></p>
 			</div>
 			<div class="event-detail flex-2">
-				<p class="pvh2">Даня Берковский</p>
+				<p class="pvh2">Автор</p>
 			</div>
 			<div class="event-detail">
 				<p class="pvh2">{formatDate(event.date)}</p>
