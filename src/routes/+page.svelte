@@ -26,7 +26,7 @@
 		</h4>
 	</div>
 	<div class="subsection">
-		<img class="bg-img" src="/blueprint-building.png" alt="kerka building blueprint" />
+		<img class="bg-img" src="/blueprint-building.webp" alt="kerka building blueprint" />
 	</div>
 </section>
 <section class="main-section">
