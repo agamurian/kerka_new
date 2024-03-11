@@ -36,7 +36,9 @@
 	<div class="subsection p-20 flex items-center align-middle">
 		<p>
 			{content.opened[$lang]}
-			<br /><br />
+			<br />
+			---
+			<br />
 			{content.andnow[$lang]}
 		</p>
 	</div>
