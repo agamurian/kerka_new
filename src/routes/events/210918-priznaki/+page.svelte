@@ -1,0 +1,28 @@
+---
+title: Я подаю вам признаки жизни
+path: /events/210918-priznaki
+date: 2021-09-18
+dateend: 2021-10-18
+summary: Выствка Алины Измайловой. Куратор - Евгения Койнова
+eventtypes: ['выставка']
+authors: ['Алина Измайлова','Евгения Койнова']
+---
+
+![афиша](./images/210918-a.jpg)
+
+Существует условный список из девяти признаков, которым отвечает живое: питание, дыхание, выделения, рост, развитие, смерть, размножение, наследственность и чувствительность. Однако часто эти проявления можно встретить и в неживой природе; более того – количество свойств разнится в зависимости от того, к какому научному источнику мы обращаемся. Важно отметить: то, что гарантирует выживание в одном случае, оказывается бесполезно в другом. Получается, что мы не можем полагаться на аналитический метод, чтобы утверждать чью-либо витальность. ______________________________________________
+Отвечает ли моя природа избранным критериям?
+—
+Я подаю вам эти признаки.
+17.00 18/09/2021 Суворовский пр., 43-45в, Санкт-Петербург
+
+Showing signs of life
+Alina Izmailova
+curated by Jenya Koynova
+
+There is a conventional list of nine signs which may be found in any living being: nourishment, breathing, excretion, growth, evolution, mortality, reproduction, heredity, and sentience. However, sometimes we can see inanimate nature meeting these criteria as well. Furthermore, the number of these features may vary depending on what scientific sources we consult. Note that what guarantees survival in one situation may prove useless in another. Thus, seeking to establish the vitality of any particular being, we cannot rely on the analytical method.
+____________________________________
+Does my nature comply with the criteria?
+—
+I show you these signs.
+17.00 18/09/2021 Suvorovsky pr., 43-45v, Saint Petersburg
