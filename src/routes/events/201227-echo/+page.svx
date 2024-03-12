@@ -28,12 +28,12 @@ authors: ['Ксения Башмакова']
 ---
 Фотографии с события:
 
-![общий вид экспозиции](./images/echo.jpeg)
+![общий вид экспозиции](./images/echo.webp)
 
-![посетители](./images/echo_1.jpeg)
+![посетители](./images/echo_1.webp)
 
-![видеоарт](./images/echo_2.jpeg)
+![видеоарт](./images/echo_2.webp)
 
-![фотографии Ксюши](./images/echo_3.jpeg)
+![фотографии Ксюши](./images/echo_3.webp)
 
-![Разманова и Зотикова](./images/echo_6.jpeg)
+![Разманова и Зотикова](./images/echo_6.webp)

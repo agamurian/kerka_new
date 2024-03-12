@@ -5,6 +5,8 @@ import json
 
 root_folder = '/home/agamurian/gits/kerka_new/src/routes/events/'
 
-for file in os.listdir(root_folder):
-    if file.endswith('svelte'):
-        shutil.move(file, file.replace('.svelte', '.svx'))
+for root, dirs, files in os.walk(root_folder):
+    for file in files:
+        filepath = os.path.join(root, file)
+        if filepath.endswith('svelte'):
+            shutil.move(filepath, filepath.replace('.svelte', '.svx'))
