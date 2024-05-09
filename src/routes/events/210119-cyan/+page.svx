@@ -7,6 +7,15 @@ summary: альтернативный метод печати
 eventtypes: ['практикум', 'фотография', 'образование']
 authors: ['Анастасия Разманова']
 ---
+
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 ![афиша](./images/cyan.webp)
 
 Мы встречаемся с вами чтобы показать и опробовать весь процесс проявки от начала и до конца.

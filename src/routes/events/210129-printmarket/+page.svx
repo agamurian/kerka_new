@@ -8,6 +8,14 @@ tags: ["ярмарка", "принтмаркет"]
 authors: ["null"]
 ---
 
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 
 ---
 

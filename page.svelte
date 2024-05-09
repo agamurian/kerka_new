@@ -1,3 +1,10 @@
+<script context="module">
+  export let metadata = {
+    title: "My lovely article",
+    author: "Dr. Fabuloso the Fabulous"
+  };
+</script>
+
 ---
 title: Выставка группы maydaymaydaymayday "Пустота оркестра"
 path: /events/210423-void-of-the-orchestra
@@ -7,11 +14,6 @@ summary: Анна Афонина и Иван Туголуков
 eventtypes: ['выставка']
 authors: ['Анна Афонина','Иван Туголуков']
 ---
-
-<script>
-  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
-  localtitle.set(title)
-</script>
 
 #### {title}
 ###### {summary}

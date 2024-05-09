@@ -8,6 +8,14 @@ eventtypes: ['лекция', 'медиа','образование']
 authors: ['Андрей Головин']
 ---
 
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 ![афиша](./images/3d_h.webp)
 
 водное занятие по 3D графике.

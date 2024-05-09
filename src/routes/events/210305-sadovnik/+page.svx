@@ -8,6 +8,14 @@ eventtypes: ['выставка']
 authors: ['Коля Садовник']
 ---
 
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 Открытие **Пт 05.02 :** 19:00 <br/>
 
 ![афиша](./images/sadovnik.webp)

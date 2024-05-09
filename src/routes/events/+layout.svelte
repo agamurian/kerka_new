@@ -4,12 +4,30 @@
 
 <style>
 	.content {
-		padding-left: 60px;
+		padding-left: 0px;
   }
   :global(img){
     padding: 0rem;
-    max-width: calc(100vw - 4rem - 120px);
+    max-width: calc(800px - 2rem - 0px);
     max-height: 90vh;
+  }
+  :global(h1){
+    padding: 3vw;
+  }
+  :global(h2){
+    padding: 3vw;
+  }
+  :global(h3){
+    padding: 3vw;
+  }
+  :global(h4){
+    padding: 3vw;
+  }
+  :global(h5){
+    padding: 3vw;
+  }
+  :global(h6){
+    padding: 3vw;
   }
   :global(p){
     max-width: calc(100vw - 120px - 4rem);
@@ -17,11 +35,12 @@
     padding: 3vw;
     line-height: 1.5;
     color: #111;
+    column-width: 800px;
   }
   :global(hr){
     outline: none;
       border: none;
-  border-top: 3px double #333;
+  border-top: 3px solid #333;
   color: #333;
   overflow: visible;
   text-align: center;

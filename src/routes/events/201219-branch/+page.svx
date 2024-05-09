@@ -7,6 +7,14 @@ summary: Бранч и диалоги об искусстве
 eventtypes: ['искусство', 'диалоги', 'бранч']
 authors: ['Наталия Тихонова']
 ---
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 
 ![афиша](./images/branch.webp)
 

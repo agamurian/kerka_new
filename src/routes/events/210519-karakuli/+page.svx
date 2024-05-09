@@ -8,6 +8,14 @@ eventtypes: ['выставка']
 authors: ['Евгения Тарасова','Катя Михатова','Сергей Комаров']
 ---
 
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 режим работы выставки:<br/>
 Ср-Вс **16:00-22:00** <br/>
 Открытие **Ср 19.05 :** 19:00 <br/>

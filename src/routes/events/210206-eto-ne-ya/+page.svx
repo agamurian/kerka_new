@@ -8,6 +8,14 @@ eventtypes: ['выставка', 'Графика', 'wod']
 authors: ['Ася Маракулина', 'Анна Андржиевская']
 ---
 
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 **upd: ** Выставка продлена, и будет также во втроник и среду 9-10 февраля.
 
 **Сб 06.02 :** 18:00 - 21:00

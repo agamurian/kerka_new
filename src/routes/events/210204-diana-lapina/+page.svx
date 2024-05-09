@@ -7,6 +7,14 @@ summary: Абстрактные ambient/noise зарисовки
 eventtypes: ['ambient', 'noise', 'sound']
 authors: ['Диана Лапина','Андрей Головин']
 ---
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 
 **Чт. 04.02 :** 20:00 - 22:00
 

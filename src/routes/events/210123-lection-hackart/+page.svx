@@ -8,6 +8,14 @@ eventtypes: ['лекция', 'медиа','образование']
 authors: ['Алексей Кондиков']
 ---
 
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
 ![афиша](./images/hack_h.webp)
 
 Hackart медиум находящийся на стыке информационной безопасности\системного программирования и современного медиаискусства.

@@ -1,26 +1,39 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { backgroundColor, lang, hideNav } from '$lib/stores';
+	import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
 	import { menu } from '$lib/content/common';
 	import LangSwitcher from './LangSwitcher.svelte';
 	import KerkaNav from '../Icons/KerkaNav.svelte';
 	import VerticalNav from './VerticalNav.svelte';
-	let lastScrollTop = 0;
+  let lastScrollTop = 0;
+	$: title = $page.url.pathname.split('/').join('/');
+  let basecolor = "#000"
+  let black = basecolor + "f"
+  $: color = basecolor + "0"
+  let percentage = "9"
+  let hidebale = false
 </script>
 
 <svelte:window
 	on:scroll={() => {
 		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		if (scrollTop > lastScrollTop) {
+    if (window.pageYOffset > 1200){
+      hidebale = true
+    }
+    if (hidebale) {
+    if ((scrollTop > lastScrollTop)) {
 			hideNav.set(true);
 		} else hideNav.set(false);
-		lastScrollTop = scrollTop;
+    } else hideNav.set(false);
+    lastScrollTop = scrollTop;
+    percentage = window.pageYOffset < 100 ? "0" : "f"
+    color = basecolor + percentage
 	}}
 />
 
 <nav
-	class="sticky top-0 p-0 navbar flex"
 	class:hide-nav={$hideNav}
+	class="sticky top-0 p-0 navbar flex"
 	style="background-color: {$backgroundColor}; height:60px"
 >
 	<section class="text-left w-15 p-0">
@@ -31,6 +44,15 @@
 
 	<div class="flex flex-grow">
 		<section style="flex: 1" />
+		<section class="w-25 nav-item" style="width: 80vw">
+      <div class='bread' style="background-color: #5550; width: 100vw; margin-top: -0.05rem; border:dotted 0.2rem #0000 ">
+        <span class='title' style='color: {black};padding-right: 15px;padding-left:15px;border-radius: 0.4rem;'>{title}</span>
+        <span class='title' style='color: {color};padding-right: 15px;padding-left:15px;border-radius: 0.4rem;overflow:hidden'>{$localtitle}</span>
+      </div>
+		</section>
+	</div>
+	<div class="flex flex-grow">
+		<section style="flex: 1" />
 		<section class="w-15 nav-item">
 			<LangSwitcher />
 		</section>
@@ -39,6 +61,16 @@
 <VerticalNav />
 
 <style>
+  .title{
+  transition: 1s ease;
+  font-size: 1.0rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  background-color: #0440;
+  }
+  .title:hover{
+  background-color: #0444;
+  }
 	.nav-item {
 		border-left: 3px dashed black;
 		display: flex;
