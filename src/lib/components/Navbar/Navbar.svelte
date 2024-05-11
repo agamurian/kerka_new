@@ -26,7 +26,7 @@
 		} else hideNav.set(false);
     } else hideNav.set(false);
     lastScrollTop = scrollTop;
-    percentage = window.pageYOffset < 100 ? "0" : "f"
+    percentage = window.pageYOffset < 500 ? "0" : "f"
     color = basecolor + percentage
 	}}
 />
