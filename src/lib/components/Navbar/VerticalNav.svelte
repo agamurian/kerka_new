@@ -6,13 +6,13 @@
 
 <div class="nav"
      style="
-     border-right: 3px solid {($theme == 'dark')  ? $white : $black};"
+     border-color: {($theme == 'dark')  ? $white : $black};"
   >
 	{#each menu as item}
 		<a href={item.href}>
       <div class="nav-item"
      style="
-     border-top: 3px dashed {($theme == 'dark')  ? $white : $black};"
+     border-color:{($theme == 'dark')  ? $white : $black};"
         class:active={item.href == $page.route.id}>
 				<span class="mx-5">
 					{item[$lang]}
@@ -24,12 +24,13 @@
 
 <style>
 	span {
-		text-rendering: optimizeLegibility;
+		text-rendering: geometricPrecision;
 	}
 	a {
 		text-decoration: none;
 	}
 	.nav {
+    border-right: 0px solid;
 		height: 100vh;
 		width: 60px;
 		position: fixed;
@@ -51,6 +52,9 @@
 		height: calc(25vh - 40px);
 	}
 
+  .nav-item:not(:first-child) {
+    border-top: 3px dashed;
+  }
 	.nav-item:hover {
 		background-color: #888;
 	}

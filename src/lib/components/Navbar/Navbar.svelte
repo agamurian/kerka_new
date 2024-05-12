@@ -32,7 +32,6 @@
   background-color: { ($theme == "dark" ) ? $black : $white}; 
   color: { ($theme == 'dark' ) ? $white : $black }
   height: 60px;
-	border-bottom: 3px solid { ($theme == 'dark' ) ? $white : $black };
 	border-top: 12px solid { ($theme == 'dark' ) ? $white : $black };
   "
 >
@@ -54,7 +53,6 @@
 	<div class="flex flex-grow">
 		<section style="flex: 1" />
 		<section class="w-15 nav-item" style="
-    border-left: 3px dashed { ($theme == 'dark' ) ? $white : $black};
     ">
 			<ThemeSwitcher />
 		</section>
