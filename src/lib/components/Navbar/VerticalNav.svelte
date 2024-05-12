@@ -56,10 +56,10 @@
     border-top: 3px dashed;
   }
 	.nav-item:hover {
-		background-color: #888;
+    text-decoration: underline 2px dashed;
 	}
 
 	.active {
-		background-color: #888;
+    text-decoration: underline 2px solid;
 	}
 </style>
