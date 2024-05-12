@@ -45,7 +45,6 @@
 		<section style="flex: 1" />
 		<section class="w-25 nav-item" style="width: 80vw">
       <div class='bread' style="background-color: #5550; width: 100vw; margin-top: -0.05rem; border:dotted 0.2rem #0000 ">
-        <span class='title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.4rem;'>{title}</span>
         <span class='title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.4rem;overflow:hidden'>{$localtitle}</span>
       </div>
 		</section>
