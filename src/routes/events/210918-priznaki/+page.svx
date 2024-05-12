@@ -13,7 +13,7 @@ ru: ru
 
 <script>
   import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
-  $lang == "ru" ? localtitle.set(title) : localtitle.set(titleen)
+  $: $lang == "ru" ? localtitle.set(title) : localtitle.set(titleen)
 </script>
 
 <style>
