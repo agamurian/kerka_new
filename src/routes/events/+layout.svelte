@@ -1,4 +1,11 @@
-<div class="content">
+<script>
+	import { page } from '$app/stores';
+	import { theme,white,black } from '$lib/stores';
+</script>
+
+<div class="content"
+style="color: { ($theme == 'dark' ) ? $white : $black };"
+  >
 	<slot />
 </div>
 
@@ -34,14 +41,13 @@
     display: inline-block;
     padding: 3vw;
     line-height: 1.5;
-    color: #111;
     column-width: 800px;
   }
   :global(hr){
     outline: none;
       border: none;
-  border-top: 3px solid #333;
-  color: #333;
+  border-top: 3px solid #888;
+  color: #888;
   overflow: visible;
   text-align: center;
   height: 5px;

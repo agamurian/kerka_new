@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { lang } from '$lib/stores';
+	import { lang, theme, white, black } from '$lib/stores';
 	const content = {
 		gallery: { en: 'Gallery', ru: 'Галерея' },
 		cont: { en: 'of contemprorary', ru: 'сoвременного' },
@@ -15,7 +15,9 @@
 	};
 </script>
 
-<section class="main-section">
+<section class="main-section"
+style='border-bottom: 3px solid { ($theme == "dark" ) ? $white : $black}; }'
+  >
 	<div class="subsection p-10 pl-20 items-center flex">
 		<h4>
 			{content.gallery[$lang]}
@@ -25,11 +27,15 @@
 			{content.art[$lang]}
 		</h4>
 	</div>
-	<div class="subsection">
+  <div class="subsection"
+style='border: { ($theme == "dark" ) ? $black : $white}; color: { ($theme == "dark" ) ? $white : $black }'
+    >
 		<img class="bg-img" src="/blueprint-building.webp" alt="kerka building blueprint" />
 	</div>
 </section>
-<section class="main-section">
+<section class="main-section"
+style='border-bottom: 3px solid { ($theme == "dark" ) ? $white : $black}; }'
+  >
 	<div class="subsection p-20 items-center flex">
 		<h1>Kerka</h1>
 	</div>
@@ -46,7 +52,6 @@
 
 <style>
 	.main-section {
-		border-bottom: 3px solid black;
 		height: calc(50vh - 80px);
 		display: flex;
 		flex-direction: row;
@@ -55,7 +60,7 @@
 		width: 50%;
 	}
 	.subsection:not(:last-child) {
-		border-right: 3px dashed black;
+		border-right: 3px dashed;
 	}
 
 	.bg-img {

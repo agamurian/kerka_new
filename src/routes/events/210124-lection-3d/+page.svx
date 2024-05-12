@@ -9,7 +9,7 @@ authors: ['Андрей Головин']
 ---
 
 <script>
-  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  import { lang, hideNav,localtitle } from '$lib/stores';
   localtitle.set(title)
 </script>
 

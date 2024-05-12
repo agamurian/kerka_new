@@ -2,6 +2,7 @@
 	import '../app.postcss';
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 	import { page } from '$app/stores';
+	import { theme,white,black } from '$lib/stores';
 	$: title = $page.url.pathname.split('/').join(' - ') + ' - Kerka Gallery';
 	const description = 'Independent contemprorary art gallery';
 </script>
@@ -21,12 +22,17 @@
 	<meta itemprop="image" content="" />
 </svelte:head>
 
+<div style="transition: 0.3 ease;background-color: { ($theme == "dark" ) ? $black : $white}; color: { ($theme == "dark" ) ? $white : $black };min-height: 100vh;">
 <Navbar />
 <div class="content">
 	<slot />
 </div>
+</div>
 
 <style>
+  @global(*,body){
+    transition: 0.3 ease;
+  }
 	.content {
 		padding-left: 60px;
 	}
