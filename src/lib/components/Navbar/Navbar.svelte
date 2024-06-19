@@ -6,7 +6,7 @@
 	import KerkaNav from '../Icons/KerkaNav.svelte';
 	import VerticalNav from './VerticalNav.svelte';
   let lastScrollTop = 0;
-	$: title = $page.url.pathname.split('/').join('/');
+	$: title = $page.url.pathname.split('/').slice(0,-1).join('/');
   let hidebale = false
 </script>
 
@@ -44,8 +44,17 @@
 	<div class="flex flex-grow">
 		<section style="flex: 1" />
 		<section class="w-25 nav-item" style="width: 80vw">
-      <div class='bread' style="background-color: #5550; width: 100vw; margin-top: -0.05rem; border:dotted 0.2rem #0000 ">
-        <span class='title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.4rem;overflow:hidden'>{$localtitle}</span>
+      <div class='bread' style="background-color: #7550; width: 100vw; margin-top: -0.05rem; border:dotted 0.2rem #0000 ">
+        {#if title.length > 0 }
+        <span class='title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.2rem;overflow:hidden'>
+          <a href = "{title}">
+          {title}
+          </a>
+        </span>
+        <span class='localtitle' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.2rem;overflow:hidden'>
+          {$localtitle}
+        </span>
+        {/if}
       </div>
 		</section>
 	</div>
@@ -64,14 +73,28 @@
 
 <style>
   .title{
+    max-width: 50vw;
+  text-overflow: ellipsis;
   transition: 1s ease;
   font-size: 1.0rem;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: #0440;
   }
   .title:hover{
-  background-color: #0444;
+  background-color: #4444;
+  }
+  .localtitle{
+    max-width: 50vw;
+  text-overflow: ellipsis;
+  transition: 1s ease;
+  font-size: 1.0rem;
+  font-weight: 600;
+  padding: 0rem;
+  background-color: #0440;
+  }
+  .localtitle:hover{
+  background-color: #0000;
   }
 	.nav-item {
 		display: flex;

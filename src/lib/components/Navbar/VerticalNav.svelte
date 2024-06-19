@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { lang,theme,white,black } from '$lib/stores';
 	import { menu } from '$lib/content/common';
+	$: titul = $page.url.pathname.split('/').join(' | ');
 </script>
 
 <div class="nav"
