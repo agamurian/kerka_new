@@ -1,27 +1,100 @@
-<div class="p-5">
-  <h1>Events</h1>
-  <a href="/events/201219-branch">201219-branch</a>
-  <a href="/events/210119-cyan">210119-cyan</a>
-  <a href="/events/210124-lection-3d">210124-lection-3d</a>
-  <a href="/events/210204-diana-lapina">210204-diana-lapina</a>
-  <a href="/events/210212-sazhina">210212-sazhina</a>
-  <a href="/events/210326-chervonnaya">210326-chervonnaya</a>
-  <a href="/events/210423-mayday">210423-mayday</a>
-  <a href="/events/210709-plesen">210709-plesen</a>
-  <a href="/events/210918-priznaki">210918-priznaki</a>
-  <a href="/events/201227-echo">201227-echo</a>
-  <a href="/events/210123-lection-hackart">210123-lection-hackart</a>
-  <a href="/events/210129-printmarket">210129-printmarket</a>
-  <a href="/events/210206-eto-ne-ya">210206-eto-ne-ya</a>
-  <a href="/events/210305-sadovnik">210305-sadovnik</a>
-  <a href="/events/210415-printmarket">210415-printmarket</a>
-  <a href="/events/210519-karakuli">210519-karakuli</a>
-  <a href="/events/210807-mistiki">210807-mistiki</a>
-</div>
+<script lang="ts">
+	import { formatDate } from '$lib/utils';
+	import { lang } from '$lib/stores';
+	import { translationOf } from '$lib/content/api.js';
+  export let data;
+  let mapping = {'en':'en-US','ru':'ru-RU'}
+</script>
+
+{#each data.events.data as event}
+  {#each data.eventsTranslations.data as et}
+    {#if et.events_id == event.id}
+      {#if et.languages_code == mapping[$lang]}
+	<a href={'/events/' + event.url}>
+		<div class="event">
+			<div class="event-detail flex-1">
+        <p class="pvh3"><b>{et.title}</b></p>
+			</div>
+			<div class="event-detail flex-2">
+        <p class="pvh2">{et.content}</p>
+			</div>
+			<div class="event-detail">
+				<p class="pvh1">{formatDate(event.date)}</p>
+			</div>
+		</div>
+  </a>
+    {/if}
+    {/if}
+{/each}
+{/each}
 
 <style>
   a {
-    margin: 1rem;
+    margin: 0rem;
     display: flex;
   }
+	.pvh1 {
+    font-size: 2vh;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-height: 100%;
+    max-width: 30vh;
+    padding: 15px;
+    padding-left: 20px;
+	}
+	.pvh2 {
+    font-size: 2vh;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-height: 100%;
+    max-width: 75vw;
+    padding:15px;
+	}
+	.pvh3 {
+		font-size: 3vh;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-height: 100%;
+    max-width: 40vw;
+    padding: 15px;
+    padding-left: 20px;
+	}
+	.hvh4 {
+		font-size: 8vh;
+		font-weight: bold;
+	}
+	.string-header {
+		display: flex;
+		align-items: center;
+		padding-left: 1em;
+		width: 100%;
+		height: calc(25vh - 40px);
+		border-bottom: 3px gray solid;
+	}
+	.event-big {
+		width: 100%;
+		height: calc(50vh - 80px);
+		border-bottom: 3px gray solid;
+	}
+	.event {
+		display: flex;
+		flex-direction: row;
+		height: calc(25vh - 40px);
+		border-bottom: 3px gray solid;
+    width: calc(100vw - 30px);
+	}
+  .event:hover {
+    background: gray;
+  }
+	.event-detail {
+    display: flex;
+	}
+	.event-detail:not(:last-child) {
+		border-right: 3px dashed gray;
+	}
+	.image-fit {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+	}
 </style>

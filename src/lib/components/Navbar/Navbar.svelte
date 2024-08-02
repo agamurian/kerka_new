@@ -32,7 +32,7 @@
   background-color: { ($theme == "dark" ) ? $black : $white}; 
   color: { ($theme == 'dark' ) ? $white : $black }
   height: 60px;
-	border-top: 12px solid { ($theme == 'dark' ) ? $white : $black };
+	border-bottom: 3px solid { ($theme == 'dark' ) ? $white : $black };
   "
 >
 	<section class="text-left w-15 p-0">
@@ -41,12 +41,12 @@
 		</a>
 	</section>
 
-	<div class="flex flex-grow">
+	<div class="flex flex-grow flex-nowrap inlinish">
 		<section style="flex: 1" />
 		<section class="w-25 nav-item" style="width: 80vw">
       <div class='bread' style="background-color: #7550; width: 100vw; margin-top: -0.05rem; border:dotted 0.2rem #0000 ">
         {#if title.length > 0 }
-        <span class='title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.2rem;overflow:hidden'>
+        <span class='nav_title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.2rem;overflow:hidden'>
           <a href = "{title}">
           {title}
           </a>
@@ -72,8 +72,9 @@
 <VerticalNav />
 
 <style>
-  .title{
+  .nav_title{
     max-width: 50vw;
+    flex-wrap: nowrap;
   text-overflow: ellipsis;
   transition: 1s ease;
   font-size: 1.0rem;
@@ -81,8 +82,13 @@
   padding: 1rem;
   background-color: #0440;
   }
-  .title:hover{
+  .nav_title:hover{
   background-color: #4444;
+  }
+  .inlinish{
+    display: flex;
+    flex-wrap:nowrap;
+    flex-direction: row;
   }
   .localtitle{
     max-width: 50vw;
@@ -97,12 +103,14 @@
   background-color: #0000;
   }
 	.nav-item {
+    flex-wrap: nowrap;
 		display: flex;
 		flex: 0;
 		padding: 7px 7px 7px 15px;
 		height: 100%;
 	}
 	.navbar {
+    flex-wrap: nowrap;
 		z-index: 2000;
 		font-size: 20px;
 		top: 0;
